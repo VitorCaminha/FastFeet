@@ -10,7 +10,7 @@ class Recipient extends Model {
         complement: Sequelize.STRING,
         state: Sequelize.STRING,
         city: Sequelize.STRING,
-        CEP: Sequelize.INTEGER,
+        cep: Sequelize.INTEGER,
       },
       {
         sequelize,
