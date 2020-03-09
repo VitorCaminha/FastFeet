@@ -72,6 +72,10 @@ class RecipientController {
 
     const recipient = await Recipient.findByPk(id);
 
+    if (!recipient) {
+      return res.status(400).json({ error: "This id doesn't exists" });
+    }
+
     const {
       name,
       street,
