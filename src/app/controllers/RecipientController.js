@@ -14,11 +14,7 @@ class RecipientController {
       complement: Yup.string(),
       state: Yup.string().required(),
       city: Yup.string().required(),
-      cep: Yup.number()
-        .required()
-        .max(99999999)
-        .positive()
-        .integer(),
+      cep: Yup.string().required(),
     });
 
     if (!(await schema.isValid(req.body))) {
@@ -58,10 +54,7 @@ class RecipientController {
       complement: Yup.string(),
       state: Yup.string(),
       city: Yup.string(),
-      cep: Yup.number()
-        .max(99999999)
-        .positive()
-        .integer(),
+      cep: Yup.string(),
     });
 
     if (!(await schema.isValid(req.body))) {
